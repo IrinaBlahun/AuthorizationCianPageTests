@@ -9,10 +9,10 @@ namespace AuthorizationCianPageTests
     {
         private IWebDriver _webDriver;
 
-        public const string StartLogin = "irinaTrigger@gmail.com";
-        public const string StarLoginPssword = "Gfhjkm4040";
-        public const string ConfirmedLoginPassword = "Gfhjkm4040";
-        public const string UserLogin = "IrinaTrigger";
+        public static string StartLogin { get; } = "irinaTrigger@gmail.com";
+        public static string StarLoginPssword { get; } = "Gfhjkm4040";
+        public static string ConfirmedLoginPassword { get; } = "Gfhjkm4040";
+        public static string UserLogin { get; } = "IrinaTrigger";
 
     }
 }

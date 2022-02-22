@@ -15,6 +15,7 @@ namespace AuthorizationCianPageTests
             _webDriver = new OpenQA.Selenium.Chrome.ChromeDriver();
             _webDriver.Navigate().GoToUrl("https://realt.by");
             _webDriver.Manage().Window.Maximize();
+            WaitUntil.ShoudLocate(_webDriver, "https://realt.by");
 
         }
 

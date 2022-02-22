@@ -11,6 +11,8 @@ namespace AuthorizationCianPageTests.PageObjects
 
         private readonly By _SingInButton = By.XPath("//span[normalize-space(text()) = 'Войти']");
         private readonly By _userLogin = By.XPath("//span[@class='c-header-user-login-full']");
+        private readonly By _personalAccountButton = By.XPath("");
+
 
         public MainMenuPageObject(IWebDriver webDriver)
         {
@@ -28,6 +30,14 @@ namespace AuthorizationCianPageTests.PageObjects
         {
             string userLogin = _webDriver.FindElement(_userLogin).Text;
             return userLogin;
+        }
+
+        public PersonalAccountPageObject GoToPersonalAccount()
+        {
+            WaitUntil.WaitElement(_webDriver, _personalAccountButton);
+            _webDriver.FindElement(_personalAccountButton).Click();
+
+            return new PersonalAccountPageObject(_webDriver);
         }
     }
 }

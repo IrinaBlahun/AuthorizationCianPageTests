@@ -25,7 +25,7 @@ namespace AuthorizationCianPageTests.PageObjects
         {
             _webdriver.FindElement(_loginInputButton).SendKeys(login);
             _webdriver.FindElement(_continueButton).Click();
-            Thread.Sleep(100);
+            WaitUntil.WaitElement(_webdriver, _passwordInpudButton);
             _webdriver.FindElement(_passwordInpudButton).SendKeys(password);
             _webdriver.FindElement(_confirmedPasswordInpudButton).SendKeys(password);
             _webdriver.FindElement(_createButton).Click();
